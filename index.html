@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VasCoffee</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- VasCoffee: projeto do curso Web do zero -->
+    <header class="topo">
+        <a href="#inicio" class="logo">💢 VasCoffee ✠︎</a>
+        <nav id="menu" class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#pedido">Pedido</a>
+            <a href="#contato">Contato</a>
+        </nav>
+        <button id="botao-tema" class="botao-tema" aria-label="Mudar tema">🌙</button>
+        <button id="botao-menu" class="botao-menu" aria-label="Abrir menu">☰</button>
+    </header>
+
+    <main>
+        <section id="inicio" class="destaque">
+            <p id="saudacao" class="saudacao">Olá! que bom ter você aqui.</p>
+            <h1>Café quentinho, paixão de Gigante.</h1>
+            <p>Cafés especiais, bolos caseiros e o melhor cantinho para torcer pelo Vasco da Gama.</p>
+            <p id="status" class="status"></p>
+            <div id="clima" class="clima">⏳ Consultando o clima...</div>
+            <a href="#cardapio" class="botao">Ver cardápio</a>
+        </section>
+
+        <section id="sobre" class="secao">
+            <h2>Sobre nós</h2>
+            <div class="duas-colunas">
+                <img src="images/logo-vascoffee.svg" alt="Logo da VasCoffee" width="500" style="display: block; margin: 0 auto;">
+                <div>
+                    <p>A <strong>VasCoffee</strong> nasceu da vontade de juntar duas paixões: um bom café e o Vasco da Gama. Aqui você encontra grãos selecionados, receitas caseiras e um ambiente feito para vascaíno conversar, trabalhar ou acompanhar o jogo.</p>
+                    <ul>
+                        <li>Grãos de pequenos produtores</li>
+                        <li>Bolos feitos todo dia de manhã</li>
+                        <li>Telão nos dias de jogo do Vasco</li>
+                        <li>Wi-Fi grátis e tomadas nas mesas</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Horário de funcionamento</h3>   
+            <table class="horarios">
+                <tr>
+                    <th>Dia</th>
+                    <th>Horário</th>
+                </tr>
+                <tr>
+                    <td>Segunda a sexta</td>
+                    <td>7h as 20h</td>
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>8h as 18h</td>
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Fechado</td>
+                </tr>
+            </table>     
+        </section>
+
+        <section id="cardapio" class="secao">
+            <h2>Cardápio</h2>
+            <p>Escolha uma categoria ou procure pelo nome:</p>
+            <div class="filtros">
+                <input type="search" id="busca" class="busca" placeholder="🔍 Buscar no cardápio...">
+                <button class="filtro ativo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="bebida">Bebidas</button>
+                <button class="filtro" data-categoria="doce">Doces</button>
+                <button class="filtro" data-categoria="salgado">Salgados</button>
+            </div>
+            <div id="lista-produtos" class="cards"></div>
+        </section>
+        
+        <section id="pedido" class="secao">
+            <h2>Meu Pedido</h2>
+            <ul id="itens-pedido" class="itens-pedido"></ul>
+            <p class="total">Total: <strong id="total">R$ 0,00</strong></p>
+
+            <h3>Entrega</h3>
+            <form id="form-entrega" class="form">
+                <label for="cep">CEP</label>
+                <input id="cep" placeholder="00000-000" maxlength="9" required>
+                <p id="msg-cep" class="mensagem"></p>
+                <label for="endereco">Endereço</label>
+                <input id="endereco" placeholder="Rua, bairro e cidade" required>
+                <label for="numero">Número</label>
+                <input id="numero" placeholder="Ex.: 123" required>
+                <button type="submit" class="botao">Finalizar Pedido</button>
+            </form>
+            <p id="msg-pedido" class="mensagem"></p>
+        </section>
+        
+        <section id="contato" class="secao">
+            <h2>Contato</h2>
+            <p>📍 Rua Roberto Dinamite, 10, Barreira do Vasco</p>
+            <p>☎️ <a href="tel:+5511988775544">(11) 98877-5577</a></p>
+            <p>📧 <a href="mailto:contato@vascoffee.com.br">contato@vascoffee.com.br</a></p>
+            <p>📷 <a href="https://www.instagram.com/vascoffee" target="_blank">Siga a gente no Instagram</a></p>
+            <iframe class="mapa" title="Mapa da VasCoffee" width="425" height="350" src="https://www.openstreetmap.org/export/embed?bbox=-48.29673528671265%2C-18.929234101414295%2C-48.2928729057312%2C-18.92038427024453&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=17/-18.924809/-48.294804">Ver mapa ampliado</a></small>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <p>&copy; 2026 VasCoffee - Feito por Pedro Pécora no curso Web do Zero</p>
+        <a href="#inicio">Voltar ao topo &uarr;</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
